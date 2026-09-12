@@ -27,6 +27,12 @@
                 android:resource="@xml/file_paths" />
         </provider>
         <activity
+            android:name=".store.StoreCatalogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".store.StoreAppDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".english.main.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
