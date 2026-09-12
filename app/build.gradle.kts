@@ -15,6 +15,10 @@ android {
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val lumaApiBaseUrl = (project.findProperty("LUMA_API_BASE_URL") as String?)
+            ?: "https://all-api-node.vercel.app"
+        buildConfigField("String", "LUMA_API_BASE_URL", "\"${lumaApiBaseUrl.trimEnd('/')}\"")
     }
 
     buildTypes {
@@ -38,6 +42,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
